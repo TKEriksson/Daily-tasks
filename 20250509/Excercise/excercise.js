@@ -1,5 +1,5 @@
 //This entire week i will focus on repeating the basics...
-
+// I also want to relearn some react, i knew the basics of it before so rest of the day will be spent on that. I think it also will include practicing javascript, like arrow functions etc.
 
 const prompt = require("prompt-sync")({ sigint: true });
 
