@@ -1,6 +1,8 @@
 //This entire week i will focus on repeating the basics...
 // I also want to relearn some react, i knew the basics of it before so rest of the day will be spent on that. I think it also will include practicing javascript, like arrow functions etc.
 
+// Next week i think i will re-do ALL the previous excercises, even if i think i know most of them. It will guranantee that i know as much as before. I remember much, but not all like arrow functions, destructuring, array mapping etc.
+
 const prompt = require("prompt-sync")({ sigint: true });
 
 
