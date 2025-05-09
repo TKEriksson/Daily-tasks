@@ -1,0 +1,18 @@
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+}
+
+.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 10px 20px;
+}

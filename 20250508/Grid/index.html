@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID</title>
+
+  <style>
+    
+    body {
+      padding:0;
+      margin:0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 0.2fr 1.2fr 0.2fr;
+      height:100vh;
+      grid-template-areas: 
+        "nav nav nav nav"
+        "main main main sidebar"
+        "footer footer footer sidebar";
+      ;
+    }
+
+    .nav {
+      grid-area: nav;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .main {
+      grid-area: main;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .footer {
+      grid-area: footer;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    
+    </style>
+
+
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav" style="background-color: #ff9999;">NAV</div>
+    <div class="main" style="background-color: #66b3ff;">MAIN</div>
+    <div class="sidebar" style="background-color: #99ff99;">SIDEBAR</div>
+    <div class="footer" style="background-color: #ffcc99;">FOOTER</div>
+  </div>
+
+</body>
+</html>
