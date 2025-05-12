@@ -1,6 +1,5 @@
 const prompt = require("prompt-sync")();
 
-
 // From:
 // 4. Largest of Five Numbers
 
@@ -10,6 +9,7 @@ const prompt = require("prompt-sync")();
 // Click me to see the solution
 
 // **************************************************************************
+
 // I picked this one to try to work with an array.
 // Instead of alert() i will use console.log to use with node. 
 {
@@ -45,7 +45,7 @@ const prompt = require("prompt-sync")();
 {
     console.log("\nExcercise 1");
     let rndNum = Math.floor(Math.random() * 10) + 1;
-    let guessNr = prompt("Guess nr 1 - 10: ");
+    let guessNr =  parseInt(prompt("Guess nr 1 - 10: "));
     if (rndNum == guessNr) {
         console.log("Good work! It was " + rndNum)
     } else {
@@ -305,7 +305,7 @@ console.log("\nExcercise 8");
 console.log("\nExcercise 9");
 
 {
-    let num = Number(prompt("Enter a number:")) + 1;
+    let num = parseInt(prompt("Enter a number:")) + 1;
     console.log("Take number +1 =", num); // Just to show its really a number.
     let numRev = String(num).split("").reverse().toString();
     console.log(String(num) + " reversed is", numRev);
@@ -460,8 +460,8 @@ function findMax(num1, num2) {
     if (num2 > num1) return num2;
 }
 
-let num1 = prompt("SKriv nummer 1: ");
-let num2 = prompt("SKriv nummer 2: ");
+let num1 = parseInt(prompt("SKriv nummer 1: "));
+let num2 = parseInt(prompt("SKriv nummer 2: "));
 console.log("Det högsta numret är:", findMax(num1, num2));
 }
 
@@ -469,7 +469,7 @@ console.log("Det högsta numret är:", findMax(num1, num2));
 {
 // 2. If number is even print squiare of the number
 console.log("Dagens lektion uppgift 2:");
-let num = prompt("Ange ett nummer:");
+let num =  parseInt(prompt("Ange ett nummer:"));
 if (num % 2 == 0)
     console.log("Upphöjt med två: ", num**2);
 else
