@@ -13,6 +13,7 @@ const prompt = require("prompt-sync")();
 // I picked this one to try to work with an array.
 // Instead of alert() i will use console.log to use with node. 
 {
+    
     console.log("\nExcercise 0");
     let arr = [];
     for (let i = 0; i < 5; i++) {
@@ -27,6 +28,7 @@ const prompt = require("prompt-sync")();
     }
 
     console.log("The biggest number is: " + biggest + " from the array: " + arr);
+
 }
 
 
@@ -43,6 +45,7 @@ const prompt = require("prompt-sync")();
 
 // **************************************************************************
 {
+
     console.log("\nExcercise 1");
     let rndNum = Math.floor(Math.random() * 10) + 1;
     let guessNr =  parseInt(prompt("Guess nr 1 - 10: "));
@@ -51,6 +54,7 @@ const prompt = require("prompt-sync")();
     } else {
         console.log("Wrong guess. It was " + rndNum);
     }
+
 }
 
 
@@ -67,6 +71,7 @@ const prompt = require("prompt-sync")();
 // Never worked with dates in js. So i found some functions to get what i need from a Date() object: https://www.w3schools.com/js/js_date_methods.asp
 // 
 {
+
     console.log("\nExcercise 2");
 
     let date = new Date();
@@ -80,6 +85,7 @@ const prompt = require("prompt-sync")();
     console.log(mm + "/" + dd + "/" + yyyy);
     console.log(dd + "-" + mm + "-" + yyyy);
     console.log(dd + "/" + mm + "/" + yyyy);
+
 }
 
 
@@ -93,6 +99,7 @@ const prompt = require("prompt-sync")();
 
 // using swedish vowels.
 {
+
     console.log("\nExcercise 3");
     let vow = "aouåeiyäö";
     let str = prompt("Enter a string: ");
@@ -102,6 +109,7 @@ const prompt = require("prompt-sync")();
             if (str[i] == vow[j]) cnt++;
 
     console.log(`${cnt} vowels in ${str}`);
+
 }
 
 
@@ -184,48 +192,50 @@ console.log("\nExcercise 5");
 // Write a JavaScript program to find the number appearing most frequently in a given array of integers. 
 console.log("\nExcercise 6");
 
-// So GPT tells me i can use reduce (also in the prev exc). But i dont understand it so i go with my own, and maybe learn reduce later. I should be able to do it with map?
+{
 
-let arr = [1, 1, 2, 3, 3, 3, 4, 4, 1, 1, 3, 1, 4, 5, 5, 5, 5, 6, 5, 1, 5, 5];
+    // So GPT tells me i can use reduce (also in the prev exc). But i dont understand it so i go with my own, and maybe learn reduce later. I should be able to do it with map?
 
-let test = new Map(); // So i use this because its not checking multiples.
+    let arr = [1, 1, 2, 3, 3, 3, 4, 4, 1, 1, 3, 1, 4, 5, 5, 5, 5, 6, 5, 1, 5, 5];
 
-/*
-arr.forEach(v => {
-    let cnt = 0;
-    for (let i = 0; i < arr.length; i++)
-        if (arr[i] == v) cnt++;
-    test.set(v,cnt);
-})
+    let test = new Map(); // So i use this because its not checking multiples.
 
-let max = [0, 0];
-for (let [key, value] of test) {
-    if (value > max[1]) {
-        max[0] = key;
-        max[1] = value;
+    /*
+    arr.forEach(v => {
+        let cnt = 0;
+        for (let i = 0; i < arr.length; i++)
+            if (arr[i] == v) cnt++;
+        test.set(v,cnt);
+    })
+
+    let max = [0, 0];
+    for (let [key, value] of test) {
+        if (value > max[1]) {
+            max[0] = key;
+            max[1] = value;
+        }
     }
-}
+        */
+
+
+    /*
+
     */
+    arr.forEach(v => {
+        test.set(v, (test.get(v) || 0) + 1); // if get(v) return NaN (if its not set yet), then the hole expression is 0. 
+    });
 
-
-/*
-
-*/
-arr.forEach(v => {
-    test.set(v, (test.get(v) || 0) + 1); // if get(v) return NaN (if its not set yet), then the hole expression is 0. 
-});
-
-let max = [0, 0];
-for (let [k, v] of test) {
-    if (v > max[1]) {
-        max[0] = k;
-        max[1] = v;
+    let max = [0, 0];
+    for (let [k, v] of test) {
+        if (v > max[1]) {
+            max[0] = k;
+            max[1] = v;
+        }
     }
+    console.log(test);
+    console.log("The number " + max[0] + " is most frequent (" + max[1] + " times) in\n" + arr);
+
 }
-console.log(test);
-console.log("The number " + max[0] + " is most frequent (" + max[1] + " times) in\n" + arr);
-
-
 
 
 
@@ -345,10 +355,11 @@ console.log("\nExcercise 10");
 console.log("\nExcercise 11");
 
 {
+
     let a = parseInt(prompt("Range from: "));
     let b = parseInt(prompt("Range to: "));
 
-console.log(`Random number between ${a} and ${b} is ${Math.floor(Math.random() * (b - a + 1)) + a}`);
+    console.log(`Random number between ${a} and ${b} is ${Math.floor(Math.random() * (b - a + 1)) + a}`);
 
 
 }
@@ -381,20 +392,21 @@ console.log("\nExcercise 12");
     testa();
     let time2 = performance.now();
     console.log(time2 - time1 + " millis to run testa()");
+
 }
 
 
 // 8. Pass Function as Parameter
 
 // Write a JavaScript program to pass a 'JavaScript function' as a parameter.
+{
+    console.log("\nExcercise 13");
+    function runAFunk(func) {
+        func();
+    }
 
-console.log("\nExcercise 13");
-function runAFunk(func) {
-    func();
+    runAFunk(() => { console.log("This function was passed to another function.")});
 }
-
-runAFunk(() => { console.log("This function was passed to another function.")});
-
 
 
 
@@ -407,13 +419,13 @@ runAFunk(() => { console.log("This function was passed to another function.")});
 // Expected Output : 'abeemrstw'
 // Assume punctuation and numbers symbols are not included in the passed string.
 console.log("\nExcercise 14");
+{
+    function sortChars(str) {
+        return str.split("").sort().join("");  
+    }
 
-function sortChars(str) {
-    return str.split("").sort().join("");  
+    console.log("tobias eriksson: " + sortChars("tobias eriksson: "));
 }
-
-console.log("tobias eriksson: " + sortChars("tobias eriksson: "));
-
 
 
 
@@ -453,27 +465,28 @@ console.log("\nExcercise 15");
 
 
 {
-console.log("\n\n\nDagens lektion uppgift 1");
-// 1. Find maximum of any two numbers
-function findMax(num1, num2) {
-    if (num1 > num2) return num1;
-    if (num2 > num1) return num2;
-}
+    console.log("\n\n\nDagens lektion uppgift 1");
+    // 1. Find maximum of any two numbers
+    function findMax(num1, num2) {
+        if (num1 > num2) return num1;
+        if (num2 > num1) return num2;
+    }
 
-let num1 = parseInt(prompt("SKriv nummer 1: "));
-let num2 = parseInt(prompt("SKriv nummer 2: "));
-console.log("Det högsta numret är:", findMax(num1, num2));
+    let num1 = parseInt(prompt("SKriv nummer 1: "));
+    let num2 = parseInt(prompt("SKriv nummer 2: "));
+    console.log("Det högsta numret är:", findMax(num1, num2));
+
 }
 
 
 {
-// 2. If number is even print squiare of the number
-console.log("Dagens lektion uppgift 2:");
-let num =  parseInt(prompt("Ange ett nummer:"));
-if (num % 2 == 0)
-    console.log("Upphöjt med två: ", num**2);
-else
-    console.log("Var ej jämnt.")
+    // 2. If number is even print squiare of the number
+    console.log("Dagens lektion uppgift 2:");
+    let num =  parseInt(prompt("Ange ett nummer:"));
+    if (num % 2 == 0)
+        console.log("Upphöjt med två: ", num**2);
+    else
+        console.log("Var ej jämnt.")
 }
 
 // 3. Generate a random number and print it if is greater than 50
