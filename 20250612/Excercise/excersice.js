@@ -272,25 +272,25 @@ console.log("\nExcercise 7");
 
 // Write a JavaScript program to check if a point lies strictly inside the circle. 
 // Input:
-// Center of the circle (x, y)
+// Center of the circle (cx, cy)
 // Radius of circle: r
-// Point inside a circle (a, b)
+// Point inside a circle (px, py)
 
 // It as 10 years ago i did math like this ^^. i must google / GPT.
 
 console.log("\nExcercise 8");
 {
     /* 
-    ((x-a)^2 + (y-b)^2) <= r^2
-    Where x, y is the point and h, k is the circles point and r = the circles radius.
+    ((cx-px)^2 + (cy-py)^2) <= r^2
+    Where px,p y is the point and cx, cy is the circles point and r = the circles radius.
 
     Okey, lets go (yes i write it myself).
     */
 
-    function isInCircle(x, y, a, b, r) {
+    function isInCircle(px, py, cx, cy, r) {
         //((x-a)^2 + (y-b)^2) <= r^2
-        let distance = ((x - a) ** 2) + ((y - b) ** 2);
-        return distance <= r ** 2;
+        let distance = ((cx - px) ** 2) + ((cy - py) ** 2);
+        return distance < r ** 2;
         
     }
 
@@ -317,7 +317,7 @@ console.log("\nExcercise 9");
 {
     let num = parseInt(prompt("Enter a number:")) + 1;
     console.log("Take number +1 =", num); // Just to show its really a number.
-    let numRev = String(num).split("").reverse().toString(); // thx Emil! 
+    let numRev = String(num).split("").reverse().toString(); // thx Emil!
     console.log(String(num) + " reversed is", numRev);
 }
 
