@@ -86,14 +86,21 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log("\nExcercise 5: Count Vowels");
 
-let word = prompt("Enter a string to count the vowels:");
+let str = prompt("Enter a string to count the vowels in it:");
 let vowels = "aouåeiyäö";
+let count = 0;
 
-for (let i = 0; i < word.length; i++) {
-  if (vowels.includes(word[i].toLowerCase())) {
-    console.log(word[i]);
+for (let i = 0; i < str.length; i++) {
+ if (vowels.includes(str[i].toLowerCase)) {
+    count++;
   }
-}
+ }
+
+ console.log("The number of vowels in the string is: " + count);
+
+ 
+
+
 
 
 
