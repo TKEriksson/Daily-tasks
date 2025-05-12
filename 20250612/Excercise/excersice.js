@@ -13,7 +13,7 @@ const prompt = require("prompt-sync")();
 // I picked this one to try to work with an array.
 // Instead of alert() i will use console.log to use with node. 
 {
-    
+
     console.log("\nExcercise 0");
     let arr = [];
     for (let i = 0; i < 5; i++) {
@@ -317,7 +317,7 @@ console.log("\nExcercise 9");
 {
     let num = parseInt(prompt("Enter a number:")) + 1;
     console.log("Take number +1 =", num); // Just to show its really a number.
-    let numRev = String(num).split("").reverse().toString();
+    let numRev = String(num).split("").reverse().toString(); // thx Emil! 
     console.log(String(num) + " reversed is", numRev);
 }
 
@@ -480,6 +480,7 @@ console.log("\nExcercise 15");
 
 
 {
+
     // 2. If number is even print squiare of the number
     console.log("Dagens lektion uppgift 2:");
     let num =  parseInt(prompt("Ange ett nummer:"));
@@ -487,12 +488,15 @@ console.log("\nExcercise 15");
         console.log("Upphöjt med två: ", num**2);
     else
         console.log("Var ej jämnt.")
+
 }
 
 // 3. Generate a random number and print it if is greater than 50
 {
+
     let rndNr = Math.floor(Math.random() * 100) + 1;
     if (rndNr > 50) 
         console.log(rndNr);
+    
 }
 
