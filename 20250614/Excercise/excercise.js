@@ -55,7 +55,7 @@
 
 
       } else if (key < arr[mid]) {
-                // the result is in the lower half.
+        // the result is in the lower half.
         high = mid - 1;
 
       }
@@ -83,16 +83,9 @@
 
 
 
-
-
-
 // https://www.w3resource.com/javascript-exercises/linkedlist/index.php
 // 4. Insert a node at any position in a SLL
-
 // Write a JavaScript program to insert a node at any position in a Singly Linked List.
-
-// WHAT IS THIS!? Need to watch some youtube. . .
-
 // https://www.youtube.com/watch?v=cob_kM0PJMo
 
 
@@ -103,7 +96,6 @@
 
 
 // 11. Generate Random Hexadecimal Color Code
-
 // Write a JavaScript program to generate a random hexadecimal color code.
 
 
@@ -113,7 +105,6 @@
 
 
 // 3. CSV String to 2D Array
-
 // Write a JavaScript program to convert a comma-separated value (CSV) string to a 2D array.
 
 
@@ -125,7 +116,6 @@
 
 //https://www.w3resource.com/javascript-exercises/javascript-array-exercises.php
 // 10. Print Nested Array Elements
-
 // Write a JavaScript program that prints the elements of the following array.
 // Note : Use nested for loops.
 // Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
@@ -143,9 +133,7 @@
 
 
 //https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php
-
 // 9. Days Left Before Christmas
-
 // Write a JavaScript program to calculate the days left before Christmas.  
 
 
@@ -186,7 +174,6 @@
 
 
 // 152. Round Number to Digits
-
 // Write a JavaScript program to round a number to a specified amount of digits.
 
 
@@ -194,7 +181,6 @@
 
 
 // 183. Check Valid JSON
-
 // Write a JavaScript program to check if the provided argument is valid JSON.
 
 
@@ -204,7 +190,6 @@
 
 
 // 224. Remove HTML/XML Tags
-
 // Write a JavaScript program to remove HTML/XML tags from strings.
 
 
@@ -212,7 +197,6 @@
 
 
 // 243. Distance Between Points
-
 // Write a JavaScript program to get the distance between two given points.
 
 
@@ -222,7 +206,6 @@
 
 
 // 251. Write JSON to File
-
 // Write a JavaScript program to write a JSON object to a file.
 
 
