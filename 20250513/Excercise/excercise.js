@@ -90,7 +90,7 @@ console.log("\nExcercise 4");
     }
 
     #getVolume() {
-      return (Math.PI * this.radius * 2 * this.height).toFixed(4);
+      return (Math.PI * (this.radius ** 2) * this.height).toFixed(4);
     }
 
   }
@@ -116,7 +116,7 @@ console.log("\nExcercise 4");
 // 17. Shuffle Array
 
 // Write a JavaScript program to shuffle an array.
-console.log("\nExcercise ");
+console.log("\nExcercise 5");
 {
   
   
@@ -201,7 +201,7 @@ let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n"]
     // Go from the end of the array, and swap between [i] and [randomIndex].
     for (let i = arr.length-1; i >= 0; i--) {
       let rndIndex = Math.floor(Math.random() * (i + 1)); // Gets a value from 0 to i.
-      let temp = arr[i]; // So i could have used [arr2[i], arr2[j]] = [arr2[j], arr2[i]] - "swap operation using array destructuring". But its not intuitive for me, yet. So i go with this for now.
+      let temp = arr[i]; // So i could have used a "swap operation using array destructuring". But its not intuitive for me, yet. So i go with this for now.
       arr[i] = arr[rndIndex];
       arr[rndIndex] = temp;
     }
@@ -227,9 +227,20 @@ let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n"]
 // [1, 2, 3, 4]
 // console.log(array_range(-6, 4));
 // [-6, -5, -4, -3]
-console.log("\nExcercise ");
+console.log("\nExcercise 6");
 {
-  
+  function array_range(from, to) {
+    let arr = [];
+
+    for (let i = from; i <= to; i++) {
+      arr.push(i);
+    }
+
+    return arr;
+  }
+
+  console.log(array_range(5, 15));
+
 }
 
 
@@ -242,10 +253,25 @@ console.log("\nExcercise ");
 // Write a JavaScript function that generates a string ID (specified length) of random characters.
 // Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 // Click me to see the solution.
-console.log("\nExcercise ");
+console.log("\nExcercise 7");
 
 {
   
+
+  function genId(length) {
+  
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let str = "";
+    for (let i = 0; i < length; i++) {
+      str += chars[Math.floor(Math.random() * (chars.length))];
+    }
+
+    return str;
+
+  }
+
+  console.log(genId(100));
+
 }
 
 
@@ -257,7 +283,11 @@ console.log("\nExcercise ");
 console.log("\nExcercise ");
 
 {
-  
+  const fs = require("fs"); // nåt sånt?? Måste googla... jo stämmer
+  data = fs.readFileSync("linesoftext.txt", "utf8").split("\r\n"); 
+  console.log(data);
+
+  // The solution gpt suggested was using map and trim or something. I just split like this because i know its that format... "By using .split("\r\n") you're directly targeting Windows-style line endings, which is totally valid if you're sure the file was saved with those (\r\n) — like most .txt files created on Windows."
 }
 
 

@@ -1,0 +1,6 @@
+this is a textfile
+that contains
+multiple lines of text
+so that i can try to
+import it via js
+// Tobbe
