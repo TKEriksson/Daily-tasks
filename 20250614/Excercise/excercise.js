@@ -20,26 +20,62 @@
 
 /*
 
-  Binary Search Algorithm
-  Below is the step-by-step algorithm for Binary Search:
 
-  Divide the search space into two halves by finding the middle index “mid”. 
-  Compare the middle element of the search space with the key. 
-  If the key is found at middle element, the process is terminated.
-  If the key is not found at middle element, choose which half will be used as the next search space.
-  If the key is smaller than the middle element, then the left side is used for next search.
-  If the key is larger than the middle element, then the right side is used for next search.
-  This process is continued until the key is found or the total search space is exhausted.
-  How does Binary Search Algorithm work?
-  To understand the working of binary search, consider the following illustration:
-
-  Consider an array arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, and the target = 23.
 
 */
 {
-let arr = [1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23];
 
 
+
+  function binSearch(arr, key) {
+
+    // Divide the search space into two halves by finding the middle index “mid”. 
+    // Compare the middle element of the search space with the key. 
+    // If the key is found at middle element, the process is terminated.
+    // If the key is not found at middle element, choose which half will be used as the next search space.
+    // If the key is smaller than the middle element, then the left side is used for next search.  
+    // If the key is larger than the middle element, then the right side is used for next search.
+    // This process is continued until the key is found or the total search space is exhausted.
+
+    let low = 0;
+    let high = arr.length-1;
+    let mid;
+
+    while (high >= low) {
+      mid = Math.floor((high - low) / 2) + low;
+
+      // Check if we find the key in the mid ( = found!)
+      if (key == arr[mid]) {
+        // found, return mid!
+        return mid;
+
+      } else if (key > arr[mid]) {
+        // the result is in the upper half.
+        low = mid + 1;
+
+
+      } else if (key < arr[mid]) {
+                // the result is in the lower half.
+        high = mid - 1;
+
+      }
+
+    }
+
+    return -1; // if the key == arr[mid] never returns, it means no result, so return -1.
+
+  }
+
+  let arr = [1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23];
+  let searchKey = 7;
+
+  let findPos = binSearch(arr, searchKey, 0, arr.length-1);
+
+  if (findPos >= 0) {
+     console.log(`${searchKey} found in:\n${arr}\n at pos: ${findPos}`);
+  } else {
+    console.log("Not found");
+  }
 
 }
 
