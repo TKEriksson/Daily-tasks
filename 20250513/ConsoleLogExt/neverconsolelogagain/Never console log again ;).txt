@@ -1,0 +1,5 @@
+So i made an extension for VS Code, so you just press Ctrl Alt C to console.log().
+
+https://marketplace.visualstudio.com/items?itemName=TobiasEriksson.neverconsolelogagain
+
+i did this to learn how to make extensions.

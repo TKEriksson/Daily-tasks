@@ -1,0 +1,62 @@
+{
+  "name": "neverconsolelogagain",
+  "displayName": "Never Console Log Again",
+  "description": "A Visual Studio Code extension to quickly insert console.log() with a keyboard shortcut.",
+  "version": "0.0.3",
+  "publisher": "tobiaseriksson",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TKEriksson/neverconsolelogagain"
+  },
+  "bugs": {
+    "url": "https://github.com/TKEriksson/neverconsolelogagain/issues"
+  },
+  "license": "MIT",
+  "contributes": {
+    "commands": [
+      {
+        "command": "neverconsolelogagain.insertConsoleLogCode",
+        "title": "Insert Console Log"
+      },
+      {
+        "command": "neverconsolelogagain.insertConsoleLogCodeStr",
+        "title": "Insert Console Log String"
+      },
+      {
+        "command": "neverconsolelogagain.insertConsoleLogCodeBTStr",
+        "title": "Insert Console Log String Backtick"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "neverconsolelogagain.insertConsoleLogCode",
+        "key": "ctrl+alt+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "neverconsolelogagain.insertConsoleLogCodeStr",
+        "key": "shift+alt+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "neverconsolelogagain.insertConsoleLogCodeBTStr",
+        "key": "ctrl+shift+alt+c",
+        "when": "editorTextFocus"
+      }
+      
+    ]
+  },
+  "main": "extension.js",
+  "keywords": [
+    "console.log",
+    "developer productivity",
+    "keyboard shortcut"
+  ]
+}

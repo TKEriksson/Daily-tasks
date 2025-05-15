@@ -238,9 +238,6 @@ console.log("\nExcercise 6");
 }
 
 
-
-
-
 // https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php
 // 113. Sum n + n/2 + n/4 + ...
 
