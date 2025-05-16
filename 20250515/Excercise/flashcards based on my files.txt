@@ -1,0 +1,153 @@
+# JavaScript Daily Task Quiz Questions
+
+## Questions and Answers
+
+1. **What does `let` do in JavaScript?**
+   - Declares a block-scoped variable.
+
+2. **How do you declare a constant variable in JavaScript?**
+   - Use the `const` keyword.
+
+3. **What is the difference between `==` and `===` in JavaScript?**
+   - `==` compares values with type coercion, while `===` compares values without type coercion.
+
+4. **What is the purpose of the `typeof` operator?**
+   - To determine the type of a variable or value.
+
+5. **How do you create an anonymous function in JavaScript?**
+   - `const myFunction = function() { /* code */ };`
+
+6. **What is an arrow function and how do you write one?**
+   - A shorthand way to write functions: `const myFunction = () => { /* code */ };`.
+
+7. **What is the purpose of the `this` keyword?**
+   - Refers to the object that is currently executing the code.
+
+8. **How do you declare an array in JavaScript?**
+   - `const myArray = [1, 2, 3];`
+
+9. **How do you access the first element in an array?**
+   - `myArray[0]`
+
+10. **What is the difference between `null` and `undefined`?**
+    - `null` is an assigned value, while `undefined` means a variable has been declared but not assigned a value.
+
+11. **What does `Array.prototype.map()` do?**
+    - Returns a new array with the results of calling a function on every element.
+
+12. **How do you check if a JavaScript array includes a specific value?**
+    - Use the `includes` method: `myArray.includes(value);`.
+
+13. **What is the purpose of `Array.prototype.filter()`?**
+    - Returns a new array with elements that pass a specified condition.
+
+14. **How do you create an object in JavaScript?**
+    - `const myObject = { key: 'value' };`
+
+15. **How do you access a property in an object?**
+    - Using dot notation: `myObject.key` or bracket notation: `myObject['key']`.
+
+16. **What is the purpose of `Object.keys()`?**
+    - Returns an array of an object's keys.
+
+17. **How do you add a property to an existing object?**
+    - `myObject.newKey = 'newValue';`
+
+18. **What does the `for...of` loop do?**
+    - Iterates over iterable objects like arrays, strings, etc.
+
+19. **What is the purpose of `try...catch` in JavaScript?**
+    - To handle errors gracefully in a block of code.
+
+20. **What does `JSON.stringify()` do?**
+    - Converts a JavaScript object into a JSON string.
+
+21. **How do you parse a JSON string into a JavaScript object?**
+    - Use `JSON.parse(jsonString);`.
+
+22. **What is the purpose of JavaScript promises?**
+    - To handle asynchronous operations.
+
+23. **How do you create a new promise in JavaScript?**
+    - `const myPromise = new Promise((resolve, reject) => { /* code */ });`
+
+24. **What does `async` and `await` do in JavaScript?**
+    - They simplify working with promises by allowing asynchronous code to be written in a synchronous style.
+
+25. **What is the difference between `var`, `let`, and `const`?**
+    - `var` is function-scoped, while `let` and `const` are block-scoped. `const` is for constants.
+
+26. **How do you make a function return a default value if no arguments are passed?**
+    - Use default parameters: `function myFunction(param = 'default') { /* code */ }`.
+
+27. **What is an IIFE (Immediately Invoked Function Expression)?**
+    - A function that runs as soon as it is defined: `(function() { /* code */ })();`.
+
+28. **What are JavaScript classes used for?**
+    - To create reusable objects with methods and properties.
+
+29. **How do you create a class in JavaScript?**
+    - `class MyClass { constructor() { /* code */ } }`.
+
+30. **What is the difference between `call()`, `apply()`, and `bind()`?**
+    - `call()` and `apply()` invoke a function with a specific `this` context, while `bind()` returns a new function with `this` permanently set.
+
+31. **What is the purpose of event listeners in JavaScript?**
+    - To respond to user interactions like clicks, keypresses, etc.
+
+32. **How do you add an event listener to an HTML element?**
+    - `element.addEventListener('event', callback);`.
+
+33. **What does `e.preventDefault()` do in an event handler?**
+    - Prevents the default action associated with the event.
+
+34. **What is DOM manipulation in JavaScript?**
+    - Changing the structure, style, or content of a webpage dynamically.
+
+35. **What is the purpose of `document.querySelector()`?**
+    - To select the first HTML element that matches a CSS selector.
+
+36. **How do you create a new HTML element using JavaScript?**
+    - `document.createElement('tagName');`.
+
+37. **What does `localStorage` do in JavaScript?**
+    - Stores key-value pairs in the browser with no expiration time.
+
+38. **How do you remove an item from `localStorage`?**
+    - `localStorage.removeItem('key');`.
+
+39. **What is the difference between `localStorage` and `sessionStorage`?**
+    - `localStorage` persists data indefinitely, while `sessionStorage` persists data only for the session.
+
+40. **What does `setTimeout()` do in JavaScript?**
+    - Executes a function after a specified delay.
+
+41. **How do you clear a timeout in JavaScript?**
+    - `clearTimeout(timeoutId);`.
+
+42. **What does `setInterval()` do in JavaScript?**
+    - Executes a function repeatedly at specified intervals.
+
+43. **How do you stop an interval in JavaScript?**
+    - `clearInterval(intervalId);`.
+
+44. **What is the purpose of `fetch()` in JavaScript?**
+    - To make HTTP requests and handle responses.
+
+45. **How do you handle errors in a `fetch()` request?**
+    - Use `.catch()` to handle errors.
+
+46. **What is the event loop in JavaScript?**
+    - A mechanism that handles the execution of multiple tasks, including asynchronous operations.
+
+47. **How do you debounce a function in JavaScript?**
+    - Delay the execution of a function until a specified time has passed since the last invocation.
+
+48. **What is hoisting in JavaScript?**
+    - JavaScript's default behavior of moving declarations to the top of the scope.
+
+49. **What is a closure in JavaScript?**
+    - A function that retains access to its lexical scope even when executed outside of it.
+
+50. **What does the `new` keyword do in JavaScript?**
+    - Creates an object from a constructor function or class.

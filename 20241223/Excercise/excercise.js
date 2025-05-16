@@ -163,7 +163,7 @@ function repeat(str, times) {
 }
 
 console.log(repeat("hi", 18));
-
+//7th november
 
 // "Ha!Ha!Ha!"
 console.log("\n\n************\nExcercise 6:")
